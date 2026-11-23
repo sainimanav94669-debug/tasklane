@@ -35,12 +35,12 @@ export default function HeroSection() {
       {/* Illustration */}
       <div className="flex-1 flex justify-center">
         <Image
-          src="/assets/images/hero-illustration.svg"
+          src="/assets/images/hero illustration.svg"
           alt="Tasklane app illustration"
-          width={400}
-          height={280}
+          width={440}
+          height={400}
           priority
-          className="w-full max-w-sm"
+          className="w-full max-w-110"
         />
       </div>
     </section>
