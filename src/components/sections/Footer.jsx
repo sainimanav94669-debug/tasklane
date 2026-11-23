@@ -1,4 +1,4 @@
-import Para from "@/components/ui/Para";
+import Para from "@/components/common/Para";
 
 export default function Footer() {
   return (

@@ -3,11 +3,11 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import Logo from "@/components/ui/Logo";
-import Heading from "@/components/ui/Heading";
-import Para from "@/components/ui/Para";
-import Input from "@/components/ui/Input";
-import Button from "@/components/ui/Button";
+import Logo from "@/components/common/Logo";
+import Heading from "@/components/common/Heading";
+import Para from "@/components/common/Para";
+import Input from "@/components/common/Input";
+import Button from "@/components/common/Button";
 import { useAuth } from "@/context/AuthContext";
 
 export default function SignupPage() {
@@ -65,14 +65,6 @@ export default function SignupPage() {
             It only takes a minute to get started.
           </Para>
 
-          {error && (
-            <div className="mb-4 rounded-md bg-red-50 border border-red-200 px-3 py-2">
-              <Para variant="default" className="text-red-600 text-xs">
-                {error}
-              </Para>
-            </div>
-          )}
-
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <Input
               id="fullname"
@@ -103,6 +95,14 @@ export default function SignupPage() {
               onChange={handleChange}
               required
             />
+
+            {error && (
+              <div className="rounded-md bg-red-50 border border-red-200 px-3 py-2">
+                <Para variant="default" className="text-red-600 text-xs">
+                  {error}
+                </Para>
+              </div>
+            )}
 
             <Button type="submit" size="full" disabled={loading} className="mt-1">
               {loading ? "Creating account…" : "Create account"}

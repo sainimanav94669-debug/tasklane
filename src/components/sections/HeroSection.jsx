@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import Heading from "@/components/ui/Heading";
-import Para from "@/components/ui/Para";
+import Heading from "@/components/common/Heading";
+import Para from "@/components/common/Para";
 
 export default function HeroSection() {
   return (
