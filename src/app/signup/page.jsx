@@ -1,17 +1,27 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import Logo from "@/components/ui/Logo";
 import Heading from "@/components/ui/Heading";
 import Para from "@/components/ui/Para";
 import Input from "@/components/ui/Input";
 import Button from "@/components/ui/Button";
+import { useAuth } from "@/context/AuthContext";
 
 export default function SignupPage() {
+  const { user, ready, signup } = useAuth();
+  const router = useRouter();
+
   const [form, setForm] = useState({ fullname: "", email: "", password: "" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  // If already logged in, go straight to home
+  useEffect(() => {
+    if (ready && user) router.replace("/");
+  }, [ready, user, router]);
 
   function handleChange(e) {
     setForm((prev) => ({ ...prev, [e.target.id]: e.target.value }));
@@ -29,11 +39,17 @@ export default function SignupPage() {
       return;
     }
     setLoading(true);
-    // TODO: wire up real auth
-    await new Promise((r) => setTimeout(r, 1000));
+    await new Promise((r) => setTimeout(r, 400));
+    const err = signup(form.fullname, form.email, form.password);
     setLoading(false);
-    alert("Account created! (wire up real auth next)");
+    if (err) {
+      setError(err);
+    } else {
+      router.push("/");
+    }
   }
+
+  if (!ready) return null;
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
@@ -82,7 +98,7 @@ export default function SignupPage() {
               id="password"
               label="Password"
               type="password"
-              placeholder="Create a password"
+              placeholder="Create a password (min 8 chars)"
               value={form.password}
               onChange={handleChange}
               required
@@ -95,10 +111,7 @@ export default function SignupPage() {
 
           <Para variant="muted" className="mt-5 text-center text-gray-400">
             Already have an account?{" "}
-            <Link
-              href="/login"
-              className="text-indigo-500 font-medium hover:underline"
-            >
+            <Link href="/login" className="text-indigo-500 font-medium hover:underline">
               Log in
             </Link>
           </Para>
