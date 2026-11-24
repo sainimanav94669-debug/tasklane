@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Heading from "@/components/common/Heading";
-import Para from "@/components/common/Para";
+import Paragraph from "@/components/common/Paragraph";
 import Input from "@/components/common/Input";
 import Button from "@/components/common/Button";
 import { useAuth } from "@/context/AuthContext";
@@ -18,7 +18,7 @@ export default function SignupPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // If already logged in, go straight to home
+   
   useEffect(() => {
     if (ready && user) router.replace("/");
   }, [ready, user, router]);
@@ -58,21 +58,20 @@ export default function SignupPage() {
 
           <Link href="/" className="inline-flex items-center gap-2 mb-6">
             <Image
-              src="/assets/images/logo-icon.svg"
+              src="/assets/images/logo.svg"
               alt="Tasklane logo"
-              width={20}
-              height={20}
+              width={126}
+              height={28}
               priority
-            />
-            <span className="text-sm font-semibold text-gray-900">Tasklane</span>
+            /> 
           </Link>
 
           <Heading as="h2" className="text-2xl mb-1">
             Create your account
           </Heading>
-          <Para variant="default" className="mb-6">
+          <Paragraph variant="default" className="mb-6">
             It only takes a minute to get started.
-          </Para>
+          </Paragraph>
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <Input
@@ -107,9 +106,9 @@ export default function SignupPage() {
 
             {error && (
               <div className="rounded-md bg-red-50 border border-red-200 px-3 py-2">
-                <Para variant="default" className="text-red-600 text-xs">
+                <Paragraph variant="default" className="text-red-600 text-xs">
                   {error}
-                </Para>
+                </Paragraph>
               </div>
             )}
 
@@ -118,12 +117,12 @@ export default function SignupPage() {
             </Button>
           </form>
 
-          <Para variant="muted" className="mt-5 text-center text-gray-400">
+          <Paragraph variant="muted" className="mt-5 text-center text-gray-400">
             Already have an account?{" "}
             <Link href="/login" className="text-indigo-500 font-medium hover:underline">
               Log in
             </Link>
-          </Para>
+          </Paragraph>
         </div>
       </div>
     </div>

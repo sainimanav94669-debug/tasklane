@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Heading from "@/components/common/Heading";
-import Para from "@/components/common/Para";
+import Paragraph from "@/components/common/Paragraph";
 
 export default function CtaSection() {
   return (
@@ -10,9 +10,9 @@ export default function CtaSection() {
           <Heading as="h2" className="text-2xl text-white mb-1">
             Ready to get organized?
           </Heading>
-          <Para variant="white">
+          <Paragraph variant="white">
             Create your free account and get your first task done today.
-          </Para>
+          </Paragraph>
         </div>
         <Link
           href="/signup"

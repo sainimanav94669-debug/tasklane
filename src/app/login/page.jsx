@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Heading from "@/components/common/Heading";
-import Para from "@/components/common/Para";
+import Paragraph from "@/components/common/Paragraph";
 import Input from "@/components/common/Input";
 import Button from "@/components/common/Button";
 import { useAuth } from "@/context/AuthContext";
@@ -57,21 +57,21 @@ export default function LoginPage() {
 
           <Link href="/" className="inline-flex items-center gap-2 mb-6">
             <Image
-              src="/assets/images/logo-icon.svg"
+              src="/assets/images/logo.svg"
               alt="Tasklane logo"
-              width={20}
-              height={20}
+              width={126}
+              height={28}
               priority
             />
-            <span className="text-sm font-semibold text-gray-900">Tasklane</span>
+            
           </Link>
 
-          <Heading as="h2" className="text-2xl mb-1">
+          <Heading as="h2" className="text-[32px] mb-2">
             Welcome back
           </Heading>
-          <Para variant="default" className="mb-6">
-            Log in to pick up where you left off.
-          </Para>
+          <Paragraph variant="default" className="mb-7">
+             Log in to pick up where you left off.
+          </Paragraph>
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <Input
@@ -101,16 +101,16 @@ export default function LoginPage() {
                 onChange={(e) => setRememberMe(e.target.checked)}
                 className="h-3.5 w-3.5 rounded border-gray-300 accent-indigo-500"
               />
-              <Para variant="default" className="text-xs text-gray-500">
+              <Paragraph variant="default" className="text-xs text-gray-500">
                 Keep me logged in
-              </Para>
+              </Paragraph>
             </label>
 
             {error && (
               <div className="rounded-md bg-red-50 border border-red-200 px-3 py-2">
-                <Para variant="default" className="text-red-600 text-xs">
+                <Paragraph variant="default" className="text-red-600 text-xs">
                   {error}
-                </Para>
+                </Paragraph>
               </div>
             )}
 
@@ -119,12 +119,12 @@ export default function LoginPage() {
             </Button>
           </form>
 
-          <Para variant="muted" className="mt-5 text-center text-gray-400">
+          <Paragraph variant="muted" className="mt-5 text-center text-gray-400">
             New to Tasklane?{" "}
             <Link href="/signup" className="text-indigo-500 font-medium hover:underline">
               Create an account
             </Link>
-          </Para>
+          </Paragraph>
         </div>
       </div>
     </div>
