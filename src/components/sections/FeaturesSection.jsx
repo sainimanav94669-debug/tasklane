@@ -14,7 +14,7 @@ export default function FeaturesSection() {
           {featuresContent.subheading}
         </Paragraph>
 
-        <div className="grid grid-cols-1 md:grid-cols-3  gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3  gap-6">
           {featuresData.map((f) => (
             <div key={f.id} className="flex flex-col gap-4 border border-light-grey p-6 rounded-2xl sm:p-7">
               <div className="w-9 sm:w-12 h-9 sm:h-12 rounded-lg flex items-center justify-center">

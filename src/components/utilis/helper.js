@@ -18,6 +18,6 @@ export const featuresData = [
   {
     id: "team",
     title: "Team lists",
-    desc: "Share a list and assign each task to one of your teammates.",
+    desc: "Share a list and assign work so everyone knows their part.",
   },
 ];
