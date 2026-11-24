@@ -10,6 +10,7 @@
   --dark-grey: #4A5160;
   --light-grey: #E6E9EF;
   --light-white: #E6ECFF;
+  --light-purple: #2C46B0;
 }
 
 @theme inline {
@@ -22,6 +23,7 @@
   --color-dark-grey: var(--dark-grey);
   --color-light-grey: var(--light-grey);
   --color-light-white: var(--light-white);
+  --color-light-purple: var(--light-purple)
 }
 
 body {
