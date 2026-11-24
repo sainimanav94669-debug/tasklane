@@ -2,7 +2,7 @@ import Link from "next/link";
 import Heading from "@/components/common/Heading";
 import Paragraph from "@/components/common/Paragraph";
 
-export default function CtaSection() {
+export default function GetOrganized() {
   return (
     <section className="sm:pb-20 pb-15 sm:px-8 px-4 lg:px-12 lg:pb-24">
       <div className="max-w-336 rounded-3xl p-14 mx-auto  bg-purple  flex flex-col md:flex-row items-center justify-between gap-6">

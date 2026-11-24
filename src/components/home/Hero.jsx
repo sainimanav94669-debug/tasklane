@@ -3,7 +3,7 @@ import Link from "next/link";
 import Heading from "@/components/common/Heading";
 import Paragraph from "@/components/common/Paragraph";
 
-export default function HeroSection() {
+export default function Hero() {
   return (
     <section className="max-w-360 bg-[#F3F5FF] mx-auto px-4 sm:px-8 lg:px-12 py-15 sm:py-20 lg:py-22 flex flex-col md:flex-row items-center gap-12">
        

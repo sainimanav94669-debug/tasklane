@@ -3,7 +3,7 @@ import Paragraph from "@/components/common/Paragraph";
 import Icons from "@/components/common/Icons";
 import { featuresContent, featuresData } from "@/components/utilis/helper.js";
 
-export default function FeaturesSection() {
+export default function FeaturesCard() {
   return (
     <section id="features" className="bg-white py-15 sm:py-20 lg:py-24">
       <div className="max-w-360 mx-auto px-4 sm:px-8 lg:px-12">

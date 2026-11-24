@@ -19,8 +19,7 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // If already logged in, go straight to home
-  useEffect(() => {
+   useEffect(() => {
     if (ready && user) router.replace("/");
   }, [ready, user, router]);
 
@@ -36,8 +35,7 @@ export default function LoginPage() {
       return;
     }
     setLoading(true);
-    // Small delay so the button state is visible
-    await new Promise((r) => setTimeout(r, 400));
+     await new Promise((r) => setTimeout(r, 400));
     const err = login(form.email, form.password);
     setLoading(false);
     if (err) {
@@ -49,8 +47,7 @@ export default function LoginPage() {
     }
   }
 
-  // Don't flash the form while we check auth
-  if (!ready) return null;
+   if (!ready) return null;
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">

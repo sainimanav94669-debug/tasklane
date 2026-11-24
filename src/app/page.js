@@ -1,7 +1,7 @@
 import Navbar from "@/components/home/Navbar";
-import HeroSection from "@/components/home/HeroSection";
-import FeaturesSection from "@/components/home/FeaturesSection";
-import CtaSection from "@/components/home/CtaSection";
+import Hero from "@/components/home/Hero";
+import FeaturesCard from "@/components/home/FeaturesCard";
+import GetOrganized from "@/components/home/GetOrganized";
 import Footer from "@/components/home/Footer";
 
 export default function Home() {
@@ -9,9 +9,9 @@ export default function Home() {
     <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
       <main className="flex-1">
-        <HeroSection />
-        <FeaturesSection />
-        <CtaSection />
+        <Hero />
+        <FeaturesCard />
+        <GetOrganized />
       </main>
       <Footer />
     </div>
