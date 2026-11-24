@@ -1,7 +1,7 @@
 const variants = {
   default: "text-base leading-[150%]",
   muted: "  text-xs  ",
-  body: " text-lg text-dark-grey  leading-[150%]  ",
+  body: "text-base sm:text-lg text-dark-grey  leading-[150%]  ",
   white: "  text-sm  ",
 };
 

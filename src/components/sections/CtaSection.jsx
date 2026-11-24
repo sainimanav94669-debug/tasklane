@@ -7,10 +7,10 @@ export default function CtaSection() {
     <section className="bg-indigo-500 py-14">
       <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
-          <Heading as="h2" className="text-2xl text-white mb-1">
+          <Heading as="h2" className="text-4xl leading-[120%] text-white mb-2.5">
             Ready to get organized?
           </Heading>
-          <Paragraph variant="white">
+          <Paragraph variant="white" className=" text-whites">
             Create your free account and get your first task done today.
           </Paragraph>
         </div>
