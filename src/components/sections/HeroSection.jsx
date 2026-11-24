@@ -5,35 +5,34 @@ import Para from "@/components/common/Para";
 
 export default function HeroSection() {
   return (
-    <section className="max-w-5xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12">
-      {/* Text */}
+    <section className="max-w-360 bg-[#F3F5FF] px-4 sm:px-8 lg:px-12 py-15 sm:py-20 lg:py-22 flex flex-col md:flex-row items-center gap-12">
+       
       <div className="flex-1">
-        <Heading as="h1" className="text-5xl leading-tight mb-4">
-          Plan the week.{" "}
-          <span className="text-indigo-500">Finish the work.</span>
+        <Heading as="h1" className="text-3xl sm:text-5xl lg:text-[56px] mb-5 sm:mb-6">
+         Plan the week. Finish the work.{" "}
+           
         </Heading>
-        <Para variant="body" className="max-w-md mb-8">
-          Tasklane keeps your tasks, deadlines and notes in one calm place, so
-          nothing slips through.
+        <Para variant="body" className="text-[#4A5160] font-normal mb-5 leading-[150%] sm:mb-6 text-base sm:text-xl ">
+          Tasklane keeps your tasks, deadlines and notes in one calm place, so nothing slips through.
         </Para>
-        <div className="flex items-center gap-3">
+        <div className="flex items-start gap-3">
           <Link
             href="/signup"
-            className="rounded-md bg-indigo-500 px-5 py-2.5 text-sm font-medium text-white hover:bg-indigo-600 transition"
+            className="rounded-[10px] bg-purple leading-[115%] px-6 sm:px-7 py-3 sm:py-4 text-base font-semibold text-white hover:bg-white hover:text-black border border-purple hover:border-grey transition duration-300"
           >
             Get started
           </Link>
           <Link
             href="/login"
-            className="rounded-md border border-gray-200 px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 transition"
+            className="rounded-[10px] border border-grey px-6 sm:px-7 py-3 sm:py-4.25 leading-[115%] text-base  font-semibold text-black hover:bg-purple hover:text-white hover:border-purple  transition"
           >
             Log in
           </Link>
         </div>
       </div>
 
-      {/* Illustration */}
-      <div className="flex-1 flex justify-center">
+       
+      <div className=" flex justify-center">
         <Image
           src="/assets/images/hero illustration.svg"
           alt="Tasklane app illustration"

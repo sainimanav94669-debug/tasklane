@@ -1,14 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
-
+ 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #171717; 
+  --purple: #3B5BDB;
+  --grey: #C9CED8;
+  --black: #14161A;
+  --grey-200: #4A5160;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
+  --color-purple: var(--purple);
+  --color-grey: var(--grey);
+  --color-black: var(--black);
+  --color-grey-200: var(--grey-200);
 }
 
 body {

@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
-import Logo from "@/components/common/Logo";
 import Heading from "@/components/common/Heading";
 import Para from "@/components/common/Para";
 import Input from "@/components/common/Input";
@@ -55,7 +55,16 @@ export default function LoginPage() {
       <div className="w-full max-w-sm">
         <div className="bg-white rounded-xl border border-gray-100 shadow-sm px-8 py-10">
 
-          <Logo className="mb-6" />
+          <Link href="/" className="inline-flex items-center gap-2 mb-6">
+            <Image
+              src="/assets/images/logo-icon.svg"
+              alt="Tasklane logo"
+              width={20}
+              height={20}
+              priority
+            />
+            <span className="text-sm font-semibold text-gray-900">Tasklane</span>
+          </Link>
 
           <Heading as="h2" className="text-2xl mb-1">
             Welcome back
