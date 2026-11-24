@@ -30,3 +30,31 @@ body {
   background: var(--background); 
   font-family: var(--font-inter), Inter, sans-serif;
 }
+
+/* ── Right-to-left fill animation ───────────────────────────────────── */
+.btn-rtl {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  z-index: 0;
+}
+
+.btn-rtl::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--btn-fill, #ffffff);
+  transform: translateX(101%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.btn-rtl:hover::before {
+  transform: translateX(0%);
+}
+
+/* ── Fill variants ───────────────────────────────────────────────────── */
+.btn-rtl-white  { --btn-fill: #ffffff; }
+.btn-rtl-purple { --btn-fill: var(--purple); }
+.btn-rtl-dark   { --btn-fill: var(--light-purple); }

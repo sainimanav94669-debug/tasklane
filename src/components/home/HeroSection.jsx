@@ -5,7 +5,7 @@ import Paragraph from "@/components/common/Paragraph";
 
 export default function HeroSection() {
   return (
-    <section className="max-w-360 bg-[#F3F5FF] px-4 sm:px-8 lg:px-12 py-15 sm:py-20 lg:py-22 flex flex-col md:flex-row items-center gap-12">
+    <section className="max-w-360 bg-[#F3F5FF] mx-auto px-4 sm:px-8 lg:px-12 py-15 sm:py-20 lg:py-22 flex flex-col md:flex-row items-center gap-12">
        
       <div className="flex-1">
         <Heading as="h1" className="text-3xl sm:text-5xl lg:text-[56px] mb-5 sm:mb-6">
@@ -18,13 +18,13 @@ export default function HeroSection() {
         <div className="flex items-start gap-3">
           <Link
             href="/signup"
-            className="rounded-[10px] bg-purple leading-[115%] px-6 sm:px-7 py-3 sm:py-4 text-base font-semibold text-white hover:bg-white hover:text-black border border-purple hover:border-grey transition duration-300"
+            className="btn-rtl btn-rtl-white rounded-[10px] bg-purple leading-[115%] px-6 sm:px-7 py-3 sm:py-4 text-base font-semibold text-white border border-purple hover:text-black hover:border-grey"
           >
             Get started
           </Link>
           <Link
             href="/login"
-            className="rounded-[10px] border border-grey px-6 sm:px-7 py-3 sm:py-4.25 leading-[115%] text-base  font-semibold text-black hover:bg-purple hover:text-white hover:border-purple  transition"
+            className="btn-rtl btn-rtl-purple rounded-[10px] border border-grey bg-white px-6 sm:px-7 py-3 sm:py-4.25 leading-[115%] text-base font-semibold text-black hover:text-white hover:border-purple"
           >
             Log in
           </Link>

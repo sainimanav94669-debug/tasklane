@@ -44,7 +44,7 @@ export default function Navbar() {
               </span>
               <button
                 onClick={handleLogout}
-                className="cursor-pointer rounded-[10px] border border-grey sm:px-5 px-4 py-2 sm:py-3 leading-[123%] text-[15px] font-semibold text-black hover:bg-purple hover:text-white hover:border-purple transition"
+                className="btn-rtl btn-rtl-purple cursor-pointer rounded-[10px] border border-grey sm:px-5 px-4 py-2 sm:py-3 leading-[123%] text-[15px] font-semibold text-black hover:text-white hover:border-purple"
               >
                 Log out
               </button>
@@ -60,7 +60,7 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/signup"
-                className="rounded-[10px] bg-purple border leading-[123%] border-purple hover:border-grey  sm:px-5 px-4 py-2 sm:py-3 max-w-23.75 text-nowrap text-[15px] font-semibold text-white hover:text-black  hover:bg-white  transition"
+                className="btn-rtl btn-rtl-white rounded-[10px] bg-purple border leading-[123%] border-purple sm:px-5 px-4 py-2 sm:py-3 max-w-23.75 text-nowrap text-[15px] font-semibold text-white hover:text-black hover:border-grey"
               >
                 Sign up
               </Link>

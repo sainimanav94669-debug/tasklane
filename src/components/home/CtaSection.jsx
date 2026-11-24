@@ -16,7 +16,7 @@ export default function CtaSection() {
         </div>
         <Link
           href="/signup"
-          className="rounded-[10px] border border-white bg-white px-6 sm:px-7 py-3 sm:py-4.25 leading-[115%] text-base  font-semibold text-light-purple hover:bg-purple hover:text-white   transition"
+          className="btn-rtl btn-rtl-dark rounded-[10px] border border-white bg-white px-6 sm:px-7 py-3 sm:py-4.25 leading-[115%] text-base font-semibold text-light-purple hover:text-white "
         >
           Create account
         </Link>
