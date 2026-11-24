@@ -45,6 +45,7 @@ export default function SignupPage() {
     if (err) {
       setError(err);
     } else {
+      setForm({ fullname: "", email: "", password: "" });
       router.push("/");
     }
   }
@@ -73,7 +74,7 @@ export default function SignupPage() {
             It only takes a minute to get started.
           </Paragraph>
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <form onSubmit={handleSubmit} autoComplete="off" className="flex flex-col gap-4">
             <Input
               id="fullname"
               label="Full name"
@@ -81,6 +82,7 @@ export default function SignupPage() {
               placeholder="Your name"
               value={form.fullname}
               onChange={handleChange}
+              autoComplete="off"
               required
             />
 
@@ -91,6 +93,7 @@ export default function SignupPage() {
               placeholder="you@example.com"
               value={form.email}
               onChange={handleChange}
+              autoComplete="off"
               required
             />
 
@@ -101,6 +104,7 @@ export default function SignupPage() {
               placeholder="Create a password (min 8 chars)"
               value={form.password}
               onChange={handleChange}
+              autoComplete="new-password"
               required
             />
 

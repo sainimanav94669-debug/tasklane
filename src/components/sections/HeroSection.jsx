@@ -12,7 +12,7 @@ export default function HeroSection() {
          Plan the week. Finish the work.{" "}
            
         </Heading>
-        <Paragraph variant="body" className="text-[#4A5160] font-normal mb-5 leading-[150%] sm:mb-6 text-base sm:text-xl ">
+        <Paragraph variant="body" className="text-dark-grey font-normal mb-5 leading-[150%] sm:mb-6 text-base sm:text-xl ">
           Tasklane keeps your tasks, deadlines and notes in one calm place, so nothing slips through.
         </Paragraph>
         <div className="flex items-start gap-3">

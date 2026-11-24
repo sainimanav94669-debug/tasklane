@@ -43,6 +43,8 @@ export default function LoginPage() {
     if (err) {
       setError(err);
     } else {
+      setForm({ email: "", password: "" });
+      setRememberMe(false);
       router.push("/");
     }
   }
@@ -73,7 +75,7 @@ export default function LoginPage() {
              Log in to pick up where you left off.
           </Paragraph>
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <form onSubmit={handleSubmit} autoComplete="off" className="flex flex-col gap-4">
             <Input
               id="email"
               label="Email"
@@ -81,6 +83,7 @@ export default function LoginPage() {
               placeholder="you@example.com"
               value={form.email}
               onChange={handleChange}
+              autoComplete="off"
               required
             />
 
@@ -91,6 +94,7 @@ export default function LoginPage() {
               placeholder="Enter your password"
               value={form.password}
               onChange={handleChange}
+              autoComplete="new-password"
               required
             />
 
