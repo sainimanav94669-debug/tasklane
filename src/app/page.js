@@ -1,8 +1,8 @@
-import Navbar from "@/components/sections/Navbar";
-import HeroSection from "@/components/sections/HeroSection";
-import FeaturesSection from "@/components/sections/FeaturesSection";
-import CtaSection from "@/components/sections/CtaSection";
-import Footer from "@/components/sections/Footer";
+import Navbar from "@/components/home/Navbar";
+import HeroSection from "@/components/home/HeroSection";
+import FeaturesSection from "@/components/home/FeaturesSection";
+import CtaSection from "@/components/home/CtaSection";
+import Footer from "@/components/home/Footer";
 
 export default function Home() {
   return (
